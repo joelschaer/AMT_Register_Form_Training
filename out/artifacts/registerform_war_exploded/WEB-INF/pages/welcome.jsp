@@ -3,6 +3,7 @@
   Author: joel schar
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,9 +39,12 @@
         Welcome
       </span>
       <div class="container-contact3-form-btn">
-        <c:url class="contact3-form-btn" value="/registerform/register.jsp">
-          register
+        <c:url var="URL"  value="/register">
+          Register
         </c:url>
+        <a class="contact3-form-btn"  href="<c:out value="${URL}"/>">
+          Register
+        </a>
       </div>
     </div>
   </div>
